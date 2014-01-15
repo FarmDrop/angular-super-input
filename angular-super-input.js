@@ -1,5 +1,7 @@
 'use strict';
 angular.module('superInput', [])
+
+angular.module('superInput')
     .directive('superInput', function(){
         return {
             templateUrl: 'template/_super-input.html',
