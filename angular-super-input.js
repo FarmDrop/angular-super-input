@@ -23,14 +23,22 @@ angular.module('superInput')
                         }
                     },
                     post: function (scope,element,attrs){
-                        var ctrl = scope.form['holder'];
-                        scope.form.$removeControl(ctrl);
-                        element.find('input').attr('name',scope.data.id);
-                        ctrl.$name = scope.data.id;
-                        scope.form.$addControl(ctrl);
+                        var input = element.find('input'), // Gets the input element
+                            ctrl = scope.form['holder']; // Gets the ctrl from the form
+                        scope.form.$removeControl(ctrl); // Removes the current controller
+                        input.attr('name',scope.data.id); // Attaches your name to the input
+                        ctrl.$name = scope.data.id; // Changes the name of the input in the ctrl
+                        ctrl.$setValidity('visited',true); // Says there is an error with 'visited' - i.e. input has not been visited
+                        scope.form.$addControl(ctrl); // Adds the controller back to the from
 
+
+                        // On blur of the input, say that there is not an error with 'visited' - i.e. that the input has been visited
+                        input.bind('blur',function(){
+                            ctrl.$setValidity('visited',false);
+                            scope.$apply()
+                        });
                     }
                 }
             }
         }
-    })
+    });
