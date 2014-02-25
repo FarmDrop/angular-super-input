@@ -1,28 +1,29 @@
 {
-  "name": "angular-super-input",
-  "version": "0.5.0",
-  "homepage": "https://github.com/mylescc/super-input",
-  "authors": [
-    "Myles Cowper-Coles <mylescc@gmail.com>"
-  ],
-  "description": "An Angular Directive that allows you to quickly and easily get up input groups with validation",
-  "main": "angular-super-input.js",
-  "keywords": [
-    "angular",
-    "directive",
-    "input",
-    "super",
-    "bootstrap"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "angular": "~1.2.9"
-  }
+    "name": "angular-super-input",
+    "version": "0.6.0",
+    "homepage": "https://github.com/FarmDrop/angular-super-input",
+    "authors": [
+        "Myles Cowper-Coles <mylescc@gmail.com>"
+    ],
+    "description": "An Angular Directive that uses Bootstrap to allow you to quickly and easily get validation for input groups",
+    "main": "angular-super-input.js",
+    "keywords": [
+        "angular",
+        "directive",
+        "input",
+        "super",
+        "bootstrap"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "~1.2.9",
+        "bootstrap": "3.1.1"
+    }
 }

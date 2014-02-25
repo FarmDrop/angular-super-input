@@ -1,6 +1,6 @@
 <div class="form-group">
-    <label for="{{data.id}}">{{data.name}} <span ng-if="data.required == 'true'">*</span></label>
-    <input id="{{data.id}}" class="form-control" type="{{data.type}}" name="holder" ng-model="model" ng-blur="checkValidity()" ng-required="data.required == 'true'" ng-minlength="{{data.minlength}}"/>
+    <label for="{{data.id}}">{{data.label}} <span ng-if="data.required == 'true'">*</span></label>
+    <input id="{{data.id}}" class="form-control" type="{{data.type}}" name="holder" ng-model="model" ng-required="data.required == 'true'" ng-minlength="{{data.minlength}}" ng-maxlength="{{data.maxlength}}"/>
     <p class="help-block" ng-show="form.{{data.id}}.$invalid && form.{{data.id}}.$error.visited">
         <span ng-show="form.{{data.id}}.$error.required">A {{data.name}} is required</span>
         <span ng-show="form.{{data.id}}.$error.email">That doesn't look like an email</span>

@@ -1,7 +1,6 @@
 'use strict';
-angular.module('superInput', [])
 
-angular.module('superInput')
+angular.module('superInput', [])
     .directive('superInput', function(){
         return {
             templateUrl: 'template/_super-input.html',
@@ -15,11 +14,12 @@ angular.module('superInput')
                 return {
                     pre: function(scope,element,attrs){
                         scope.data ={
-                            name: attrs.name,
+                            label: attrs.label,
                             id: attrs.model.replace(/\./g,''),
                             type: attrs.type || 'text',
                             required: attrs.required || 'false',
-                            minlength: attrs.minlength || 0
+                            minlength: attrs.minlength || 0,
+                            maxlength: attrs.maxlength
                         }
                     },
                     post: function (scope,element,attrs){
